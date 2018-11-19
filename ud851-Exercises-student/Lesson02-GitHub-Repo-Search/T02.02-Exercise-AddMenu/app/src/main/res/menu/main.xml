@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~    Copyright 2018 Fabien Boismoreau
   ~
@@ -13,7 +14,14 @@
   ~    See the License for the specific language governing permissions and
   ~    limitations under the License.
   -->
-<resources>
-  <string name="app_name">Github Query</string>
-  <string name="search_title">Search</string>
-</resources>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <item
+    android:id="@+id/action_search"
+    android:orderInCategory="1"
+    android:title="@string/search_title"
+    app:showAsAction="ifRoom"/>
+
+</menu>
