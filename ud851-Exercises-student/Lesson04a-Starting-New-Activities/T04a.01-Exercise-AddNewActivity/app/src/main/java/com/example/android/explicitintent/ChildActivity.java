@@ -14,27 +14,21 @@
  *    limitations under the License.
  */
 
-apply plugin: 'com.android.application'
+package com.example.android.explicitintent;
 
-android {
-    compileSdkVersion 25
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 
-    defaultConfig {
-        applicationId "com.example.android.explicitintent"
-        minSdkVersion 15
-        targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-        }
-    }
-}
+public class ChildActivity extends AppCompatActivity {
 
-dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:25.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+  private TextView mText;
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_child);
+
+    mText = (TextView) findViewById(R.id.tv_display);
+  }
 }
