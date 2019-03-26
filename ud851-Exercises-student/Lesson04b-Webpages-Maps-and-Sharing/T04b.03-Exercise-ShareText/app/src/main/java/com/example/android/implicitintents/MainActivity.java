@@ -145,14 +145,10 @@ public class MainActivity extends AppCompatActivity {
     String mimeType = "text/plain";
     String title = "Where do you want to share ?";
 
-    Intent intent = ShareCompat.IntentBuilder.from(this)
+    ShareCompat.IntentBuilder.from(this)
         .setChooserTitle(title)
         .setType(mimeType)
         .setText(text)
-        .createChooserIntent();
-
-    if (intent.resolveActivity(getPackageManager()) != null) {
-      startActivity(intent);
-    }
+        .startChooser();
   }
 }
