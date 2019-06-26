@@ -74,5 +74,6 @@
 
   <!-- Value in SharedPreferences for green color option -->
   <string name="pref_color_green_value" translatable="false">green</string>
+  <string name="invalid_size_error">The value should be between 0.1 and 3</string>
 
 </resources>
