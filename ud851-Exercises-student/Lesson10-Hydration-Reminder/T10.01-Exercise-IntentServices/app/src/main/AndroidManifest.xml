@@ -18,8 +18,9 @@
       </intent-filter>
     </activity>
 
-    <!-- TODO (14) Declare WaterReminderIntentService in the Manifest and set the exported
-     attribute to false-->
+    <service
+      android:exported="false"
+      android:name=".sync.WaterReminderIntentService"/>
 
   </application>
 </manifest>
